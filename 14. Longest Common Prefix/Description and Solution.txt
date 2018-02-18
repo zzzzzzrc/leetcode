@@ -1,0 +1,7 @@
+Write a function to find the longest common prefix string amongst an array of strings.
+
+找出一组字符串的最长共有前缀
+
+字符串排序
+
+从最短的字符串的第一位起 逐位判断在其余的字符串中是否都相等

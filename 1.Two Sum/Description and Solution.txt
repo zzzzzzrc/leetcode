@@ -1,0 +1,16 @@
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+
+Solution:
+使用字典查找
+当（目标数-当前数）不在字典内时：
+	将当前数存入字典： key=当前数 value=当前数的index
+当（目标数-当前数）在字典内时：
+	返回（目标数-当前数）的字典value 以及 当前数的index

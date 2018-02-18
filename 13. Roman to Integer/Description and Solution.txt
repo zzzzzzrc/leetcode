@@ -1,0 +1,17 @@
+Given a roman numeral, convert it to an integer.
+
+Input is guaranteed to be within the range from 1 to 3999.
+
+
+solution：
+
+"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000
+没什么好解释的
+从罗马数字的最右端开始遍历
+如果当前数字小于前面的数字：
+	total - 当前数字
+如果当前数字大于或等于前面的数字：
+	total + 当前数字
+举个例子：
+IV    total = 0（初始值）-->5(当前值大于前面的0+5)-->4(当前值小于前面的5-1)
+建立字典哟
