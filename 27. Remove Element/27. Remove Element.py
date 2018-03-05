@@ -5,12 +5,11 @@ class Solution:
         :type val: int
         :rtype: int
         """
-        length = len(nums)
-        i = 0
-        while(i < length):
+        #依次遍历 当前值等于指定值时pop 否则i+=1 遍历完
+        i=0
+        while(i<len(nums)):
             if nums[i] == val:
-                del nums[i]
-                length = len(nums)
+                nums.pop(i)
             else:
                 i+=1
-        return length
+        return len(nums)

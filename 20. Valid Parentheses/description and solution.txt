@@ -1,0 +1,8 @@
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
+
+出现一个右括号则必定有一个左括号与之对应
+
+字符串从头开始遍历 左括号存入栈  右括号 判断：
+该右括号是否与栈顶的左括号对应 不对应 或者 空栈 false
