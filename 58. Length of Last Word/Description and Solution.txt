@@ -1,0 +1,16 @@
+Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.
+
+If the last word does not exist, return 0.
+
+Note: A word is defined as a character sequence consists of non-space characters only.
+
+Example:
+
+Input: "Hello World"
+Output: 5
+
+将字符串按空格分隔  
+反转分割后的字符串  使末尾的空格置前
+遍历
+遇到第一个不是空格的字符 返回其长度
+若都为空格 不存在字符 返回0

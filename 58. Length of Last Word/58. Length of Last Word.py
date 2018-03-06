@@ -4,27 +4,12 @@ class Solution:
         :type s: str
         :rtype: int
         """
-        #指针从尾部向头部遍历 当遇到空格时 停止遍历 返回长度
-        if s=="":
-            return 0
-        else:
-            length = len(s)
-            index = length-1
-            #末尾由空格
-            while(index>=0):
-                if s[index] == ' ':
-                    index -= 1
-                else:
-                    string = s[0:index+1]
-                    break
-            if index == -1:
-                return 0
-            else:
-                string_len = len(string)
-                string_index = string_len-1
-                while(string_index>=0):
-                    if string[string_index] != ' ':
-                        string_index -= 1
-                    else:
-                        return string_len - 1 -string_index
-                return string_len
+        # if s == "":
+        #     return 0
+        # else:
+        split = s.split(' ')    #以空格分割
+        rev = split[::-1]       #反转 以解决末尾空格的问题
+        for item in rev:
+            if item !='':
+                return len(item)    #遇到第一个不为空格的字符  返回长度
+        return 0                #若都为空格 返回0
